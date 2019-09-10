@@ -6,9 +6,20 @@
   display: flex;
 }
 
+.article--odd {
+  flex-direction: row-reverse;
+}
+
 .article__desc {
   width: 462px;
   padding: 80px 50px 0 70px;
+
+  .article--odd & {
+    width: 515px;
+    flex: 0 0 515px;
+    padding-left: 75px;
+    padding-right: 105px;
+  }
 }
 
 .article__title {
@@ -53,7 +64,12 @@
 .article__preview {
   width: 762px;
   position: relative;
+  flex: 0 0 762px;
 
+  .article--odd & {
+    width: 490px;
+    flex: 0 0 490px;
+  }
 }
 
 .article__preview-desc  {
@@ -62,6 +78,11 @@
   position: absolute;
   right: -30px;
   top: 0;
+
+  .article--odd & {
+    left: -30px;
+    right: auto;
+  }
 }
 
 .article__preview-desc-content {
