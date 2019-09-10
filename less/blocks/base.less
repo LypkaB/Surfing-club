@@ -11,3 +11,27 @@ body {
   width: 1224px;
   margin: 0 auto;
 }
+
+.read-more-link, a.read-more-link {
+  position: relative;
+  padding-bottom: 10px;
+  display: inline-block;
+  font-family: 'League Spartan Bold', sans-serif;
+  font-size: 9px;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 5.4px;
+  text-decoration: none;
+  color: #333333;
+
+  &::after {
+    content: '';
+    width: 99px;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(93, 168, 239, 0.7);
+  }
+}

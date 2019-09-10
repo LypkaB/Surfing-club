@@ -1,0 +1,59 @@
+/* Сlub description */
+
+.club-description-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.club-description {
+  padding-top: 110px;
+}
+
+.club-description__img {
+
+}
+
+.club-description-video {
+  position: absolute;
+  right: 0;
+  top: 43px;
+  z-index: 1;
+}
+
+.club-description-video__control {
+  width: 68px;
+  height: 68px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  box-shadow: -2px -2px 35px rgba(0, 0, 0, 0.13);
+  background-color: #5da8ef;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-35%, -50%);
+  }
+}
+
+.club-description__text {
+  width: 340px;
+  margin: 60px 0 45px 115px;
+  font-family: 'Poppins Light', sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.35px;
+  color: rgba(97, 97, 97, 0.6);
+}
+
+.club-description__link {
+  margin-left: 115px;
+}
