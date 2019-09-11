@@ -10,12 +10,15 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="libs/owl2/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="libs/owl2/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/main.css">
 
     <title>Surfing Club</title>
 </head>
 <body>
-    @@include('blocks/header.html')
+    @@include('blocks/navigation.html')
+    @@include('blocks/header-slider.html')
     @@include('blocks/quote.html')
     @@include('blocks/club-description.html')
     @@include('blocks/shop.html')
@@ -24,5 +27,9 @@
     @@include('blocks/subscribe.html')
     @@include('blocks/camp.html')
     @@include('blocks/footer.html')
+
+    <script src="libs/jquery/jquery-3.3.1.min.js"></script>
+    <script src="libs/owl2/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
