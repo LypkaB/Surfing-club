@@ -10,8 +10,14 @@ body {
 }
 
 .container {
-  width: 1224px;
-  margin: 0 auto;
+  width: 100%;
+  padding: 0 15px;
+
+  @media (min-width: 1254px) {
+    width: 1224px;
+    margin: 0 auto;
+    padding: 0;
+  }
 }
 
 .flex-end {

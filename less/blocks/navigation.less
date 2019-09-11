@@ -3,17 +3,28 @@
 	------------------------------------------------- */
 
 .navigation-wrapper {
-  position: relative;
-}
-
-.navigation-wrapper {
-  height: 128px;
   display: flex;
+  flex-direction: column;
   align-items: center;
+
+  @media (min-width: 1254px) {
+    height: 128px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .logo-wrapper {
-  margin-right: 190px;
+  width: 100%;
+  padding: 30px 0;
+  text-align: center;
+
+  @media (min-width: 1254px) {
+    width: auto;
+    margin-right: 190px;
+    padding: 0;
+  }
 }
 
 .logo {
@@ -21,23 +32,47 @@
 }
 
 .navigation {
-  margin: 0;
+  width: 100%;
+  margin: 0 0 20px 0;
   padding: 0;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   font-family: 'League Spartan', sans-serif;
   font-weight: 700;
   list-style: none;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  @media (min-width: 1254px) {
+    width: auto;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
 }
 
 .navigation__item {
-  margin-right: 40px;
+  margin-bottom: 15px;
+  text-align: center;
 
   a {
     text-decoration: none;
   }
 
   &:last-child {
-    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: 768px) {
+    margin-right: 40px;
+    margin-bottom: 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 
@@ -55,22 +90,46 @@
 	------------------------------------------------- */
 
 .header-desc {
-  width: 12px;
-  height: 12px;
-  position: absolute;
-  right: -50px;
-  top: 58px;
+  width: auto;
+  display: block;
+  position: static;
 
-  @media (max-width: 1400px) {
+  @media (min-width: 1254px) {
+    width: 12px;
+    height: 12px;
+    position: absolute;
     right: 30px;
     top: 170px;
+    z-index: 9;
+  }
 
-    .header-desc__content {
-      color: #fff;
-    }
+  @media (min-width: 1400px) {
+    right: -50px;
+    top: 58px;
   }
 }
 
 .header-desc__content {
-  .vertical-text;
+  margin-bottom: 20px;
+  position: static;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 5.4px;
+  color: rgba(11, 12, 17, .2);
+
+  @media (min-width: 1254px) {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #fff;
+    transform: rotate(-90deg) translate(-100%, 0);
+    transform-origin: left top;
+  }
+
+  @media (min-width: 1400px) {
+    color: rgba(11, 12, 17, .2);
+  }
 }
