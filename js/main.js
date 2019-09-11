@@ -11,7 +11,6 @@ $(document).ready(function () {
 
     headerSlider.owlCarousel({
         items: 1,
-        // loop: true,
         dots: false,
         smartSpeed: 1500
     });
