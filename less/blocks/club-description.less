@@ -9,20 +9,38 @@
 }
 
 .club-description {
-  padding-top: 110px;
-  padding-bottom: 95px;
+  padding-top: 110px/2;
+  padding-bottom: 95px/2;
+
+  @media (min-width: 1254px) {
+    padding-top: 110px;
+    padding-bottom: 95px;
+  }
+}
+
+.club-description__img {
+  width: 70%;
+
+  @media (min-width: 1254px) {
+    width: auto;
+  }
 }
 
 .club-description-video {
+  width: 60%;
   position: absolute;
   right: 0;
   top: 43px;
   z-index: 1;
+
+  @media (min-width: 1254px) {
+    width: auto;
+  }
 }
 
 .club-description-video__control {
-  width: 68px;
-  height: 68px;
+  width: 68px/2;
+  height: 68px/2;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -30,25 +48,44 @@
   border-radius: 50%;
   box-shadow: -2px -2px 35px rgba(0, 0, 0, 0.13);
   background-color: #5da8ef;
+  cursor: pointer;
 
-  &:hover {
-    cursor: pointer;
+  @media (min-width: 1254px) {
+    width: 68px;
+    height: 68px;
   }
 
   img {
+    width: 35%;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-35%, -50%);
+
+    @media (min-width: 1254px) {
+      width: auto;
+    }
   }
 }
 
 .club-description__text {
-  width: 340px;
-  margin: 60px 0 45px 115px;
+  max-width: 450px;
+  margin-top: 90px;
+  margin-bottom: 0;
   .desc-text;
+
+  @media (min-width: 855px) and (max-width: 1254px) {
+    max-width: 300px;
+  }
+
+  @media (min-width: 1254px) {
+    width: 340px;
+    margin: 60px 0 45px 115px;
+  }
 }
 
 .club-description__link {
-  margin-left: 115px;
+  @media (min-width: 1254px) {
+    margin-left: 115px;
+  }
 }
