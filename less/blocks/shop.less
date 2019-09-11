@@ -3,9 +3,14 @@
 	------------------------------------------------- */
 
 .shop {
-  padding-top: 95px;
-  padding-bottom: 110px;
+  padding-top: 95px/2;
+  padding-bottom: 110px/2;
   position: relative;
+
+  @media (min-width: 1254px) {
+    padding-top: 95px;
+    padding-bottom: 110px;
+  }
 
   &::before {
     content: '';
@@ -33,7 +38,11 @@
 .shop-slider-special-holder {
   position: absolute;
   left: 0;
-  right: -85px;
+  right: 0;
+
+  @media (min-width: 1394px) {
+    right: -85px;
+  }
 }
 
 .shop-slider {
@@ -52,9 +61,14 @@
   height: 48px;
   padding: 15px;
   position: absolute;
-  bottom: calc(130px + 40px);
+  bottom: 220px;
   z-index: 9;
   cursor: pointer;
+
+
+  @media (min-width: 650px) {
+    bottom: calc(180px + 40px);
+  }
 
   img {
     vertical-align: top;
@@ -62,19 +76,50 @@
 }
 
 .shop-slider-arrow--left {
-  left: -70px;
-  transform: translate(-100%, -100%);
+  left: -15px;
+
+  @media (min-width: 650px) {
+    left: 0;
+    transform: translate(100%, 0%);
+  }
+
+  @media (min-width: 1334px) {
+    left: -70px;
+    transform: translate(-100%, 0%);
+  }
 }
 
 .shop-slider-arrow--right {
-  right: -70px;
-  transform: translate(100%, -100%);
+  right: -15px;
+
+  @media (min-width: 650px) {
+    right: 0;
+    transform: translate(-100%, 0%);
+  }
+
+  @media (min-width: 1334px) {
+    right: 0;
+    transform: translate(100%, 0%);
+  }
 }
 
 .board {
+  width: 250px;
   height: 435px;
   margin-top: 130px;
+  margin-left: auto;
+  margin-right: auto;
   position: relative;
+
+  @media (min-width: 650px) {
+    padding-left: 185px;
+    width: 435px + 185px;
+  }
+
+  @media (min-width: 1254px) {
+    margin-left: 0;
+    padding-left: 0;
+  }
 }
 
 .board__img-holder {
@@ -84,6 +129,14 @@
   left: 0;
   bottom: 10px;
   background-color: #ececec;
+
+  @media (min-width: 650px) {
+    left: 185px;
+  }
+
+  @media (min-width: 1254px) {
+    left: 0;
+  }
 }
 
 .board__img {
@@ -97,7 +150,19 @@
   width: 210px;
   position: absolute;
   top: 196px;
-  left: 216px;
+  right: 0;
+  z-index: 9;
+  text-align: right;
+
+  @media (min-width: 650px) {
+    right: auto;
+    left: 216px + 185px;
+    text-align: left;
+  }
+
+  @media (min-width: 1254px) {
+    left: 216px;
+  }
 }
 
 .board__cat {

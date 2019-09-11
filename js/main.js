@@ -31,11 +31,19 @@ $(document).ready(function () {
     var shopSlider = $('#shopSlider');
 
     shopSlider.owlCarousel({
-        items: 3,
         dots: false,
         loop: true,
         margin: 2,
-        smartSpeed: 1500
+        smartSpeed: 1500,
+        responsive: {
+            0 : {
+                items: 1
+            },
+
+            1254 : {
+                items: 3
+            }
+        }
     });
 
     $('#shopSliderLeft').click(function () {
